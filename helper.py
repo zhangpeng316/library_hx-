@@ -107,8 +107,7 @@ class CSULibrary(object):
         '''
         self.login()
 
-        access_token = requests.utils.dict_from_cookiejar(self.client.cookies)[
-            'access_token']
+        access_token = requests.utils.dict_from_cookiejar(self.client.cookies)['access_token']
 
         for i in range(0, len(self.seatid)):
             url = "http://libzw.csu.edu.cn/api.php/spaces/" + \
