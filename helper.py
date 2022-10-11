@@ -134,7 +134,7 @@ class CSULibrary(object):
         logging.info(response.json()['msg'])
         if response.json()['status'] == 0:
             raise Exception(response.json()['msg'])
-            exit(0)
+            os._exit(0)
 
     def checkIn(self):
         '''
