@@ -241,8 +241,12 @@ if __name__ == "__main__":
     helper = CSULibrary(args.userid, args.password)
     # helper.reserve()
     # 故意不做异常处理，这样 Github 便会发邮件提醒
-    if args.action == 'reserve':
-        helper.reserve()
+    try:
+        if args.action == 'reserve':
+            helper.reserve()
+    except Exception:
+        logging.info("预约失败")
+
     # elif args.action == 'checkIn':
     #     helper.checkIn()
     # elif args.action == 'leave':
