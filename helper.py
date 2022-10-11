@@ -124,10 +124,10 @@ class CSULibrary(object):
                 'operateChannel': '2'
             }
             response = self.client.post(url, headers=headers, data=data)
-            print(url)
-            print(headers)
-            print(data)
-            print(response.json()['msg'] )
+#             print(url)
+#             print(headers)
+#             print(data)
+#             print(response.json()['msg'] )
             if response.json()['status'] == 1:
                 break
         
