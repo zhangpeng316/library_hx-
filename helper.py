@@ -234,7 +234,7 @@ if __name__ == "__main__":
     parser.add_argument('--userid', type=str, help='账号')
     parser.add_argument('--password', type=str, help='密码')
     args = parser.parse_args()
-
+    pirnt('ok')
     LOG_FORMAT = "%(asctime)s\t%(levelname)s\t%(message)s"
     logging.basicConfig(filename='library.log',
                         level=logging.INFO, format=LOG_FORMAT)
